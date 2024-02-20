@@ -1,10 +1,10 @@
 {
-  "name": "create-vue",
-  "version": "3.9.2",
+  "name": "create-xodel",
+  "version": "1.9.2",
   "description": "An easy way to start a Vue project",
   "type": "module",
   "bin": {
-    "create-vue": "outfile.cjs"
+    "create-xodel": "outfile.cjs"
   },
   "files": [
     "locales",
@@ -15,6 +15,13 @@
     "node": ">=v16.20.0"
   },
   "scripts": {
+    "rc": "yarn release && yarn push",
+    "release": "opm upload && opm clean dist",
+    "commit": "git add . && git commit -am ",
+    "push": "yarn commit",
+    "resty": "resty -I lib -I resty_modules/lualib -I resty_modules/site/lualib --main-conf 'env NODE_ENV;' --http-conf 'lua_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;'",
+    "postpush": "while true; do timeout 5 git push origin && { echo 'Git push succeeded'; break; } || echo 'Git push failed, retrying in 1 seconds'; sleep 1; done",
+    "pull": "while true; do git pull origin && { echo 'Git pull succeeded'; break; } || echo 'Git pull failed, retrying in 1 seconds'; sleep 1; done",
     "prepare": "husky",
     "format": "prettier --write .",
     "build": "zx ./scripts/build.mjs",
@@ -26,15 +33,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/create-vue.git"
+    "url": "git+https://github.com/xiangnanscu/create-xodel.git"
   },
   "keywords": [],
   "author": "Haoqun Jiang <haoqunjiang+npm@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuejs/create-vue/issues"
+    "url": "https://github.com/xiangnanscu/create-xodel/issues"
   },
-  "homepage": "https://github.com/vuejs/create-vue#readme",
+  "homepage": "https://github.com/xiangnanscu/create-xodel#readme",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
     "@types/eslint": "^8.56.2",

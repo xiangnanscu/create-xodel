@@ -54,14 +54,14 @@ await esbuild.build({
         output: {
           file: 'LICENSE',
           template(allDependencies) {
-            // There's a bug in the plugin that it also includes the `create-vue` package itself
-            const dependencies = allDependencies.filter((d) => d.packageJson.name !== 'create-vue')
+            // There's a bug in the plugin that it also includes the `create-xodel` package itself
+            const dependencies = allDependencies.filter((d) => d.packageJson.name !== 'create-xodel')
             const licenseText =
-              `# create-vue core license\n\n` +
-              `create-vue is released under the MIT license:\n\n` +
+              `# create-xodel core license\n\n` +
+              `create-xodel is released under the MIT license:\n\n` +
               CORE_LICENSE +
               `\n## Licenses of bundled dependencies\n\n` +
-              `The published create-vue artifact additionally contains code with the following licenses:\n` +
+              `The published create-xodel artifact additionally contains code with the following licenses:\n` +
               [...new Set(dependencies.map((dependency) => dependency.packageJson.license))].join(
                 ', '
               ) +

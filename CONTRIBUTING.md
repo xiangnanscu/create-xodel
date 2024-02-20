@@ -1,6 +1,6 @@
-# `create-vue` Contributing Guide
+# `create-xodel` Contributing Guide
 
-Hi! We are really excited that you are interested in contributing to `create-vue`. Before submitting your contribution, please make sure to take a moment and read through the following guide:
+Hi! We are really excited that you are interested in contributing to `create-xodel`. Before submitting your contribution, please make sure to take a moment and read through the following guide:
 
 ## Repo Setup
 
@@ -9,7 +9,7 @@ This repo uses [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodu
 To download everything including submodules, run the following command:
 
 ```sh
-git clone --recursive https://github.com/vuejs/create-vue.git
+git clone --recursive https://github.com/xiangnanscu/create-xodel.git
 ```
 
 If you have already cloned the repo but without adding the `--recursive` flag, please run `git submodule update --init --recursive` to initialize and update the submodule.
