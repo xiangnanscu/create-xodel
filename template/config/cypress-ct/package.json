@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test:unit": "cypress run --component",
+    "test:unit:dev": "cypress open --component"
+  },
+  "dependencies": {
+    "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.4"
+  }
+}
