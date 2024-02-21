@@ -19,7 +19,7 @@ try {
   }
 }
 
-await $`git push HEAD:main`
+await $`git push origin HEAD:main`
 
 const projectRoot = path.resolve(__dirname, '../')
 cd(projectRoot)
