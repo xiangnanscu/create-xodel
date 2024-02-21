@@ -19,8 +19,7 @@ try {
   }
 }
 
-await $`git tag -m "v${version}" v${version}`
-await $`git push`
+await $`git push HEAD:main`
 
 const projectRoot = path.resolve(__dirname, '../')
 cd(projectRoot)
