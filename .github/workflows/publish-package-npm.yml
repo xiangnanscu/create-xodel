@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-          ssh-key: ${{ SSH_KEY }}
+          ssh-key: ${{ secrets.SSH_KEY }}
           submodules: true
       - name: Configure Git
         run: |
