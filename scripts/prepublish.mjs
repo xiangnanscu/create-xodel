@@ -1,6 +1,7 @@
 #!/usr/bin/env zx
 import 'zx/globals'
 
+await $`npm --no-git-tag-version version minor`
 await $`pnpm build`
 await $`pnpm snapshot`
 
