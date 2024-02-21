@@ -198,7 +198,7 @@ async function init() {
           name: 'needsTypeScript',
           type: () => (isFeatureFlagsUsed ? null : 'toggle'),
           message: language.needsTypeScript.message,
-          initial: false,
+          initial: true,
           active: language.defaultToggleOptions.active,
           inactive: language.defaultToggleOptions.inactive
         },
@@ -206,7 +206,7 @@ async function init() {
           name: 'needsJsx',
           type: () => (isFeatureFlagsUsed ? null : 'toggle'),
           message: language.needsJsx.message,
-          initial: false,
+          initial: true,
           active: language.defaultToggleOptions.active,
           inactive: language.defaultToggleOptions.inactive
         },
@@ -214,7 +214,7 @@ async function init() {
           name: 'needsRouter',
           type: () => (isFeatureFlagsUsed ? null : 'toggle'),
           message: language.needsRouter.message,
-          initial: false,
+          initial: true,
           active: language.defaultToggleOptions.active,
           inactive: language.defaultToggleOptions.inactive
         },
@@ -222,7 +222,7 @@ async function init() {
           name: 'needsPinia',
           type: () => (isFeatureFlagsUsed ? null : 'toggle'),
           message: language.needsPinia.message,
-          initial: false,
+          initial: true,
           active: language.defaultToggleOptions.active,
           inactive: language.defaultToggleOptions.inactive
         },
@@ -269,7 +269,7 @@ async function init() {
           name: 'needsEslint',
           type: () => (isFeatureFlagsUsed ? null : 'toggle'),
           message: language.needsEslint.message,
-          initial: false,
+          initial: true,
           active: language.defaultToggleOptions.active,
           inactive: language.defaultToggleOptions.inactive
         },
@@ -282,7 +282,7 @@ async function init() {
             return 'toggle'
           },
           message: language.needsPrettier.message,
-          initial: false,
+          initial: true,
           active: language.defaultToggleOptions.active,
           inactive: language.defaultToggleOptions.inactive
         }
